@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  	<meta charset="utf-8">
+  	<title>PJs Tachyons Template</title>
+  	<meta name="description" content="">
+  	<meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  	<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+
+  <!-- CSS
+  	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  	<link rel="stylesheet" href='css/reset.css' >
+  	<link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+
+  <!-- JS
+  	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  	<script src="js/client.js"></script>
+
+  <!-- Favicon
+  	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  	<link rel="icon" type="image/png" href="../../dist/images/favicon.png">
+
+  </head>
+  <body>
+
+  <!-- Primary Page Layout
+  	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  	<header class="sans-serif">
+  		<div class="cover bg-left bg-center-l" >
+  			<div class="bg-dark-gray pb5 pb6-m pb7-l">
+  				<nav class="dt w-100 mw8 center"> 
+				  </nav> 
+				  <div class = "flex-ns items-center cf mt4 mt5-m mt6-l ph3 v-mid center">
+				  	<div class="fl ph4 tc tl-ns">
+				  		<h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Introducing cozie</h1>
+				  		<h2 class="fw1 f3 white-80 mt3 mb4">A fitbit platform for human comfort data collection</h2>
+				  		<a class="f6 no-underline grow dib v-mid white ba b--white ph3 pv2 mb3" href="/">Download</a>
+				  	</div>
+				  	<div class="fl mw6 ph5">
+				  		<img src="img/home.png"> 
+				  	</div>
+  				</div>
+			</div>
+		</div> 
+	</header>
+
+<section class="sans-serif bg-white black ">
+	<div class="fl w-100 ph3 bg-white black pa3">
+		<div class="fl mw6 ph5">
+			<img src="img/iphone.png"> 
+		</div>
+		<div class = "flex-ns items-center cf mt4 mt5-m mt6-l ph3 v-mid center">
+			<div class="fl ph4 tc tl-ns">
+				<h1 class="f2 f2-l fw2 mb0 lh-title">Tailor your experiment via the fitbit mobile app</h1>
+				<h2 class="fw1 f3 black-80 mt3 mb4">and design your flow</h2>
+
+				<img src="img/flow.png"> 
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="sans-serif">
+
+	<div class = "fl w-100 ph3 pa3 pv6-l white bg-dark-gray">
+		<div class="ph4 f2 f2-l fw2 mb3 mt4 mt0-ns pt3">Querry your data programatically 
+		</div>
+		<div class= "w-100 ph4 " >
+			<div class="ttu tracked bb bw1 b--black-10 dib pb2">
+				<a class="bg-animate bg-white hover-bg-black hover-white dib link pa1 black" onclick="openCity(event, 'London')">python</a>
+				<a class="bg-animate bg-white hover-bg-black hover-white dib link pa1 black" onclick="openCity(event, 'Paris')">js</a>
+				<a class="bg-animate bg-white hover-bg-black hover-white dib link pa1 black" onclick="openCity(event, 'Tokyo')">bash</a>
+			</div>
+
+			<div id="London" class="tabcontent">
+
+				<code>
+					from influxdb import InfluxDBClient, DataFrameClient
+				</code> </br></br>
+				<code>
+					client = DataFrameClient(cd.host, cd.port, cd.usr, cd.passwd, cd.db, ssl=True, verify_ssl=True)
+				</code></br></br>
+				<code>
+					result = client.query("SELECT * FROM public.autogen.your-experiment-id)
+				</code>
+
+			</div>
+
+			<div id="Paris" class="tabcontent" style="display: none">
+				<code>
+					const Influx = require('influx');
+				</code> </br></br>
+				<code>
+					influx.query(`select * from public.autogen.your-experiment-id`)
+				</code> </br>
+				<code>
+					.then( result => response.status(200).json(result) )
+				</code> </br></br>
+				<code>
+					.catch( error => response.status(500).json({ error }) );
+				</code>
+			</div>
+
+			<div id="Tokyo" class="tabcontent" style="display: none">
+				<code>
+					$ influx -execute 'SELECT * FROM "public.autogen.your-experiment-id" -database="public"
+				</code>
+			</div>
+		</div>
+
+		<div class = "pa4">
+			<a class="f6 no-underline grow dib v-mid bg-blue white ba b--blue ph3 pv2 mb3" href="/">Full Documentation</a>
+		</div>
+	</div>
+</section>
+
+
+
+<section class="sans-serif bg-white black relative">
+	<div class="fl w-100 ph3 bg-white black pa3 pv6-l">
+
+		<div class = "fl flex-ns w-50 items-center cf ph3 v-mid br">
+			<div class="fl ph4 tc tl-ns">
+				<h1 class="f2 f2-l fw2 mb0 pb2">Free to use </h1>
+
+				<h2 class="fw1 f4 black-80 mb1">full functionality</h2>
+				<h2 class="fw1 f4 black-80 mb1">public database</h2>
+
+				<div class="pt2 ">
+					<a class="f6 no-underline grow dib v-mid bg-blue white ba b--blue ph3 pv2 mb3" href="/">Download</a>
+
+				</div>
+
+			</div>
+		</div>
+
+		<div class = "fl flex-ns w-50 items-center cf ph3 v-mid">
+			<div class="fl ph4 tc tl-ns">
+				<h1 class="f2 f2-l fw2 mb0 pb2">Go Pro </h1>
+				<h2 class="fw1 f4 black-80 mb1">private database</h2>
+				<h2 class="fw1 f4 black-80 mb1">customised questions</h2>
+
+				<div class="pt2 ">
+					<a class="f6 no-underline grow dib v-mid bg-blue white ba b--blue ph3 pv2 mb3 href="mailto:clayton@nus.edu?Subject=[cozie]Request%20Quote%20For%20Professional%20Version%20" target="_top">Request Quote</a>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<section class="sans-serif bg-dark-gray white ">
+	<div class="fl w-100 ph1 bg-dark-gray white pa3 pv6-l">
+		<div class = "flex-ns items-center cf ph3 center">
+			<div class="fl ph4 tc tl-ns">
+				<h1 class="f2 f2-l fw2 mb0 ">Example Projects </h1>
+				<ul class="list pl0">
+
+					<li class="pa3 pa4-ns bb b--black-10">
+						<a href="http://www.projectcoolbit.com/" target="_blank" class="db white link dim f3 mb1">Project Coolbit</a>
+						<span class="f5 db lh-copy measure">
+						Project Coolbit is an interdisciplinary and multi-city research initiative to understand thermal comfort in a personalized and continuous way</span>
+					</li>
+
+				</ul>
+
+
+
+			</div>
+
+		</div>
+	</div>
+</section>
+
+<section class="sans-serif bg-white black ">
+	<div class="fl w-100 ph1 bg-white black pa3 pv6-l">
+		<div class = "flex-ns items-center cf ph3 center">
+			<div class="fl ph4 tc tl-ns">
+				<h1 class="f2 f2-l fw2 mb0 ">Designed with love by: </h1>
+				<h2 class="fw1 f3 black-80 mt3 mb4"></h2>
+
+			</div>
+
+			<div class="tc pa4">
+				<img src="http://www.budslab.org/buds-lab.github.io/pjjayasthissa.jpeg" class="br-100 pa1 ba b--black-10 h3 w3" alt="avatar">
+				<div >Prageeth Jayathissa </div>
+				<div class = "fw3"> Lead Developer </div>
+
+			</div>
+			<div class="tc pa2 pa4-l">
+				<img src="https://avatars1.githubusercontent.com/u/17702098?s=460&v=4" class="br-100 pa1 ba b--black-10 h3 w3" alt="avatar">
+				<div >Kairat Talantbekov</div>
+				<div class = "fw3"> Front End </div>
+
+
+			</div>
+			<div class="tc pa2 pa4-l">
+				<img src="http://www.budslab.org/buds-lab.github.io/matiasquintana.png" class="br-100 pa1 ba b--black-10 h3 w3" alt="avatar">
+				<div >Matias Quintana</div>
+				<div class = "fw3"> Back End </div>
+			</div>
+			<div class="tc pa2 pa4-l">
+				<img src="http://www.budslab.org/buds-lab.github.io/tapeesh.png" class="br-100 pa1 ba b--black-10 h3 w3" alt="avatar">
+				<div >Tapeesh Sood </div>
+				<div class = "fw3"> UI Design </div>
+			</div>
+			<div class="tc pa2 pa4-l">
+				<img src="http://www.budslab.org/buds-lab.github.io/dr_clayton_miller.png" class="br-100 pa1 ba b--black-10 h3 w3" alt="avatar">
+				<div >Clayton Miller </div>
+				<div class = "fw3"> Project Coordinator </div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<section class="sans-serif bg-dark-gray white ">
+	<div class="fl w-100 ph1 bg-dark-gray white pa2">
+		<div class = "flex-ns items-center cf ph3 center">
+			<div class="fl ph4 tc tl-ns">
+				<small class="f6 db tc">© 2019 <b class="ttu">Prageeth Jayathissa</b></small>
+
+
+
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+
+<!-- End Document
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
