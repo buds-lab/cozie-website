@@ -6,7 +6,6 @@ function selectTab(evt, cityName) {
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
-    console.log(tablinks[i].className)
     tablinks[i].className = tablinks[i].className.replace(" bg-black", " bg-white");
     tablinks[i].className = tablinks[i].className.replace(" white", " black");
   }
