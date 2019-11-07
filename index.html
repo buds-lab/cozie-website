@@ -46,7 +46,7 @@
 				  	<div class="fl ph4 tc tl-ns">
 				  		<h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Introducing cozie</h1>
 				  		<h2 class="fw1 f3 white-80 mt3 mb4">A fitbit platform for human comfort data collection</h2>
-				  		<a class="f6 no-underline grow dib v-mid white ba b--white ph3 pv2 mb3" target="_blank" href="https://gam.fitbit.com/gallery/clock/d787c911-ce11-432e-8b68-69da0f3446c8">Download</a>
+				  		<a class="f6 no-underline grow dib v-mid white ba b--white ph3 pv2 mb3" target="_blank" href="https://gallery.fitbit.com/details/512ce6c5-f633-4f7b-853c-891869f5e3d8">Download</a>
 				  	</div>
 				  	<div class="fl mw6 ph5">
 				  		<img src="img/home.png"> 
@@ -88,42 +88,67 @@
 			<div id="python" class="tabcontent">
 
 				<code>
-					from influxdb import InfluxDBClient, DataFrameClient
+					import requests
 				</code> </br></br>
 				<code>
-					client = DataFrameClient(cd.host, cd.port, cd.usr, cd.passwd, cd.db, ssl=True, verify_ssl=True)
+					payload = {'experiment-id': 'debug', 'weeks': '30', 'user-id': 'Vivid Vervet'}
+				</code></br>
+				<code>
+					response = requests.get('https://ay1bwnlt74.execute-api.us-east-1.amazonaws.com/test/request/', params = payload)
 				</code></br></br>
 				<code>
-					result = client.query("SELECT * FROM public.autogen.your-experiment-id)
+					print(response.content)
 				</code>
 
 			</div>
 
 			<div id="javascript" class="tabcontent" style="display: none">
-				<code>
-					const Influx = require('influx');
+								<code>
+					// You could also use the numerous nodejs GET methods
 				</code> </br></br>
 				<code>
-					influx.query(`select * from public.autogen.your-experiment-id`)
+					
+					fetch('https://ay1bwnlt74.execute-api.us-east-1.amazonaws.com/test/request/?experiment-id=debug&weeks=3')  
 				</code> </br>
 				<code>
-					.then( result => response.status(200).json(result) )
-				</code> </br></br>
+					.then(function(response) {return response.json()})
+				</code> </br>
+
 				<code>
-					.catch( error => response.status(500).json({ error }) );
+					.then(function(myJson) {console.log(JSON.stringify(myJson))});
 				</code>
+
 			</div>
 
 			<div id="bash" class="tabcontent" style="display: none">
 				<code>
-					$ influx -execute 'SELECT * FROM "public.autogen.your-experiment-id" -database="public"
+					$ curl https://ay1bwnlt74.execute-api.us-east-1.amazonaws.com/test/request/?experiment-id=debug&weeks=3
 				</code>
 			</div>
 
 			<div id="human" class="tabcontent" style="display: none">
 				<code>
-					typical human... we will set some inefficient button for you to click soon. For now, check out the documentation and have a go at using the bash commands.
-				</code>
+					Type this url in the browser
+			
+
+				</code> </br></br>
+				<code>
+					https://ay1bwnlt74.execute-api.us-east-1.amazonaws.com/test/request/?experiment-id={YOUR EXPERIMENT ID}&weeks={NUMBER_OF_WEEKS}&user-id={USER-ID(OPTIONAL)}
+
+
+				</code> </br></br>
+								<code>
+					for example. For experiment-id = debug, user-id = debug, and the last 30 weeks of data:
+
+
+				</code> </br></br>
+				<code>
+
+					https://ay1bwnlt74.execute-api.us-east-1.amazonaws.com/test/request/?experiment-id=debug&weeks=30&user-id=debug
+
+
+				</code> </br></br>
+
 			</div>
 		</div>
 
@@ -180,9 +205,9 @@
 				<ul class="list pl0">
 
 					<li class="pa3 pa4-ns bb b--black-10">
-						<a href="http://www.projectcoolbit.com/" target="_blank" class="db white link dim f3 mb1">Project Coolbit</a>
+						<a href="https://www.researchgate.net/publication/334317152_Is_your_clock-face_cozie_A_smartwatch_methodology_for_the_in-situ_collection_of_occupant_comfort_data" target="_blank" class="db white link dim f3 mb1">Indoor Comfort Study in Singapore</a>
 						<span class="f5 db lh-copy measure">
-						Project Coolbit is an interdisciplinary and multi-city research initiative to understand thermal comfort in a personalized and continuous way</span>
+						In this study fifteen users were given a smartwatch for one month and were prompted to give feedback on their thermal preferences. The data revealed a range of results from building anomalies, occupant behaviour, occupant personality clustering, and general feedback related to the building.</span>
 					</li>
 
 				</ul>
