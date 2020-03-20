@@ -1,0 +1,7 @@
+{
+  "docs": {
+    "Getting Started": ["home","doc1"],
+    "Advanced Setup": ["doc2"],
+    "Examples": ["doc3"]
+  }
+}
