@@ -13,9 +13,17 @@
         "title": "Datatransfer between the phone and the Fitbit",
         "sidebar_label": "Datatransfer between the phone and the Fitbit"
       },
-      "doc1": {
-        "title": "Latin-ish",
-        "sidebar_label": "Example Page"
+      "deploying-yourself": {
+        "title": "Deploying Yourself",
+        "sidebar_label": "Deploying Yourself"
+      },
+      "example-of-experimental-method": {
+        "title": "Example of an Experimental Methodology",
+        "sidebar_label": "Example of an Experimental Methodology"
+      },
+      "extracting-data": {
+        "title": "Extracting Data from Cozie Basic",
+        "sidebar_label": "Extracting Data from Cozie Basic"
       },
       "intro-fitbit-sdk": {
         "title": "Introduction to the Fitbit SDK",
@@ -33,20 +41,32 @@
         "title": "Installation",
         "sidebar_label": "Installation"
       },
+      "installing-watchface": {
+        "title": "Installing and using Cozie Basic",
+        "sidebar_label": "Installing and using Cozie Basic"
+      },
       "home": {
         "title": "Introduction",
         "sidebar_label": "Introduction"
       },
+      "picking-a-fitbit": {
+        "title": "Picking a Fitbit",
+        "sidebar_label": "Picking a Fitbit"
+      },
       "switching-between-screens": {
         "title": "Switching between screens",
         "sidebar_label": "Switching between screens"
+      },
+      "troubleshooting-cozie-basic": {
+        "title": "Troubleshooting Cozie Basic",
+        "sidebar_label": "Troubleshooting Cozie Basic"
       }
     },
     "links": {},
     "categories": {
-      "Getting Started": "Getting Started",
-      "Advanced Setup": "Advanced Setup",
-      "Examples": "Examples"
+      "Getting Started with Cozie Basic": "Getting Started with Cozie Basic",
+      "Creating your own Cozie": "Creating your own Cozie",
+      "Data connectivity of your Cozie": "Data connectivity of your Cozie"
     }
   },
   "pages-strings": {
