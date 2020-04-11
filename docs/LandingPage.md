@@ -24,6 +24,6 @@ This documentation guides you on how to:
 
 ## License
 
-The Cozie clockface is open sourced under at [LGPL License (2019-2020)](https://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License)
+The Cozie clockface is open sourced under at GPLv3 License.
 
 

@@ -1,7 +1,7 @@
 ---
 id: installation
-title: Installation
-sidebar_label: Installation
+title: Installation and setup
+sidebar_label: Installation and setup
 ---
 https://www.youtube.com/watch?v=oLrP8FDAQd8&list=PLkQs5WJXVHbiBDjmv-1tBYNUQOkmNCctA&index=2&t=0s
 

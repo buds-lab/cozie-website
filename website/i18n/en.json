@@ -5,6 +5,10 @@
     "previous": "Previous",
     "tagline": "A fitbit platform for human comfort data collection",
     "docs": {
+      "app-creation-setup": {
+        "title": "Creating your own Cozie App",
+        "sidebar_label": "Creating your own Cozie App"
+      },
       "uploading-to-appstore": {
         "title": "Uploading to the AppStore",
         "sidebar_label": "Uploading to the AppStore"
@@ -38,8 +42,8 @@
         "sidebar_label": "Interacting with GUI elements"
       },
       "installation": {
-        "title": "Installation",
-        "sidebar_label": "Installation"
+        "title": "Installation and setup",
+        "sidebar_label": "Installation and setup"
       },
       "installing-watchface": {
         "title": "Installing and using Cozie Basic",
