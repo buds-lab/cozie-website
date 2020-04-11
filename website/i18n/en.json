@@ -5,25 +5,41 @@
     "previous": "Previous",
     "tagline": "A fitbit platform for human comfort data collection",
     "docs": {
+      "uploading-to-appstore": {
+        "title": "Uploading to the AppStore",
+        "sidebar_label": "Uploading to the AppStore"
+      },
+      "datatransfer-between-phone-and-fitbit": {
+        "title": "Datatransfer between the phone and the Fitbit",
+        "sidebar_label": "Datatransfer between the phone and the Fitbit"
+      },
       "doc1": {
         "title": "Latin-ish",
         "sidebar_label": "Example Page"
       },
-      "doc2": {
-        "title": "document number 2"
+      "intro-fitbit-sdk": {
+        "title": "Introduction to the Fitbit SDK",
+        "sidebar_label": "Fitbit SDK"
       },
-      "doc3": {
-        "title": "This is document number 3"
+      "gs-sending-data-to-cloud": {
+        "title": "Sending data to the cloud",
+        "sidebar_label": "Sending data to the cloud"
       },
-      "doc4": {
-        "title": "Other Document"
+      "interacting-with-gui-elements": {
+        "title": "Interacting with GUI elements",
+        "sidebar_label": "Interacting with GUI elements"
       },
-      "doc5": {
-        "title": "Fifth Document"
+      "installation": {
+        "title": "Installation",
+        "sidebar_label": "Installation"
       },
       "home": {
         "title": "Introduction",
         "sidebar_label": "Introduction"
+      },
+      "switching-between-screens": {
+        "title": "Switching between screens",
+        "sidebar_label": "Switching between screens"
       }
     },
     "links": {},
