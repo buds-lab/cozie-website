@@ -146,101 +146,100 @@
               onclick="selectTab(event, 'python')"
               >python</a
             >
-            <a
-              class="tablinks bg-animate bg-white hover-bg-black hover-white dib link pa1 black"
-              onclick="selectTab(event, 'javascript')"
-              >js</a
-            >
-            <a
-              class="tablinks bg-animate bg-white hover-bg-black hover-white dib link pa1 black"
-              onclick="selectTab(event, 'bash')"
-              >bash</a
-            >
-            <a
-              class="tablinks bg-animate bg-white hover-bg-black hover-white dib link pa1 black mt1"
-              onclick="selectTab(event, 'human')"
-              >I'm Human</a
-            >
+            <!--            <a-->
+            <!--              class="tablinks bg-animate bg-white hover-bg-black hover-white dib link pa1 black"-->
+            <!--              onclick="selectTab(event, 'javascript')"-->
+            <!--              >js</a-->
+            <!--            >-->
+            <!--            <a-->
+            <!--              class="tablinks bg-animate bg-white hover-bg-black hover-white dib link pa1 black"-->
+            <!--              onclick="selectTab(event, 'bash')"-->
+            <!--              >bash</a-->
+            <!--            >-->
+            <!--            <a-->
+            <!--              class="tablinks bg-animate bg-white hover-bg-black hover-white dib link pa1 black mt1"-->
+            <!--              onclick="selectTab(event, 'human')"-->
+            <!--              >I'm Human</a-->
+            <!--            >-->
           </div>
 
           <div id="python" class="tabcontent">
             <code>
-              import requests
-            </code>
-            <br /><br />
-            <code>
+              import requests <br />
+              import pandas as pd <br />
+              import json <br /><br />
+              YOUR_TIMEZONE = 'Asia/Singapore' <br /><br />
               payload = {'experiment-id': 'debug', 'weeks': '30', 'user-id':
-              'Vivid Vervet'} </code
-            ><br />
-            <code>
-              response =
-              requests.get('https://ay1bwnlt74.execute-api.us-east-1.amazonaws.com/test/request/',
-              params = payload)
-            </code>
-            <br /><br />
-            <code>
-              print(response.content)
-            </code>
-          </div>
-
-          <div id="javascript" class="tabcontent" style="display: none;">
-            <code>
-              // You could also use the numerous nodejs GET methods
-            </code>
-            <br /><br />
-            <code>
-              fetch('https://ay1bwnlt74.execute-api.us-east-1.amazonaws.com/test/request/?experiment-id=debug&weeks=3')
-            </code>
-            <br />
-            <code>
-              .then(function(response) {return response.json()})
-            </code>
-            <br />
-
-            <code>
-              .then(function(myJson) {console.log(JSON.stringify(myJson))});
+              'Vivid Vervet'} <br />
+              response = requests.get(
+              'https://ay1bwnlt74.execute-api.us-east-1.amazonaws.com/test/request/',
+              params=payload) <br />
+              my_json = response.content.decode('utf8').replace("'", '"') <br />
+              data = json.loads(my_json) <br />
+              df = pd.read_json(data[1]['data']).T <br />
+              df.index = df.index.tz_localize('UTC').tz_convert(YOUR_TIMEZONE) <br /><br />
+              df.head()
             </code>
           </div>
 
-          <div id="bash" class="tabcontent" style="display: none;">
-            <code>
-              $ curl
-              https://ay1bwnlt74.execute-api.us-east-1.amazonaws.com/test/request/?experiment-id=debug&weeks=3
-            </code>
-          </div>
+          <!--          <div id="javascript" class="tabcontent" style="display: none;">-->
+          <!--            <code>-->
+          <!--              // You could also use the numerous nodejs GET methods-->
+          <!--            </code>-->
+          <!--            <br /><br />-->
+          <!--            <code>-->
+          <!--              fetch('https://ay1bwnlt74.execute-api.us-east-1.amazonaws.com/test/request/?experiment-id=debug&weeks=3')-->
+          <!--            </code>-->
+          <!--            <br />-->
+          <!--            <code>-->
+          <!--              .then(function(response) {return response.json()})-->
+          <!--            </code>-->
+          <!--            <br />-->
 
-          <div id="human" class="tabcontent" style="display: none;">
-            <code>
-              Type this url in the browser
-            </code>
-            <br /><br />
-            <code>
-              https://ay1bwnlt74.execute-api.us-east-1.amazonaws.com/test/request/?experiment-id={YOUR
-              EXPERIMENT ID}&weeks={NUMBER_OF_WEEKS}&user-id={USER-ID(OPTIONAL)}
-            </code>
-            <br /><br />
-            <code>
-              for example. For experiment-id = debug, user-id = debug, and the
-              last 30 weeks of data:
-            </code>
-            <br /><br />
-            <code>
-              https://ay1bwnlt74.execute-api.us-east-1.amazonaws.com/test/request/?experiment-id=debug&weeks=30&user-id=debug
-            </code>
-            <br /><br />
-          </div>
+          <!--            <code>-->
+          <!--              .then(function(myJson) {console.log(JSON.stringify(myJson))});-->
+          <!--            </code>-->
+          <!--          </div>-->
+
+          <!--          <div id="bash" class="tabcontent" style="display: none;">-->
+          <!--            <code>-->
+          <!--              $ curl-->
+          <!--              https://ay1bwnlt74.execute-api.us-east-1.amazonaws.com/test/request/?experiment-id=debug&weeks=3-->
+          <!--            </code>-->
+          <!--          </div>-->
+
+          <!--          <div id="human" class="tabcontent" style="display: none;">-->
+          <!--            <code>-->
+          <!--              Type this url in the browser-->
+          <!--            </code>-->
+          <!--            <br /><br />-->
+          <!--            <code>-->
+          <!--              https://ay1bwnlt74.execute-api.us-east-1.amazonaws.com/test/request/?experiment-id={YOUR-->
+          <!--              EXPERIMENT ID}&weeks={NUMBER_OF_WEEKS}&user-id={USER-ID(OPTIONAL)}-->
+          <!--            </code>-->
+          <!--            <br /><br />-->
+          <!--            <code>-->
+          <!--              for example. For experiment-id = debug, user-id = debug, and the-->
+          <!--              last 30 weeks of data:-->
+          <!--            </code>-->
+          <!--            <br /><br />-->
+          <!--            <code>-->
+          <!--              https://ay1bwnlt74.execute-api.us-east-1.amazonaws.com/test/request/?experiment-id=debug&weeks=30&user-id=debug-->
+          <!--            </code>-->
+          <!--            <br /><br />-->
+          <!--          </div>-->
         </div>
 
-        <div class="pa4">
-          <!--            <a class="f6 no-underline grow dib v-mid bg-blue white ba b&#45;&#45;blue ph3 pv2 mb3" target="_blank"-->
-          <!--               href="https://github.com/buds-lab/cozie-examples/wiki">Full Documentation</a>-->
-          <a
-            class="no-underline near-white bg-animate bg-transparent hover-bg-gray inline-flex ba b--white items-center ma2 tc br2 pa2 mb4"
-            href="https://github.com/buds-lab/cozie-examples"
-          >
-            <span class="f6 ml3 pr2">Example Scripts</span>
-          </a>
-        </div>
+<!--        <div class="pa4">-->
+<!--          &lt;!&ndash;            <a class="f6 no-underline grow dib v-mid bg-blue white ba b&#45;&#45;blue ph3 pv2 mb3" target="_blank"&ndash;&gt;-->
+<!--          &lt;!&ndash;               href="https://github.com/buds-lab/cozie-examples/wiki">Full Documentation</a>&ndash;&gt;-->
+<!--          <a-->
+<!--            class="no-underline near-white bg-animate bg-transparent hover-bg-gray inline-flex ba b&#45;&#45;white items-center ma2 tc br2 pa2 mb4"-->
+<!--            href="https://github.com/buds-lab/cozie-examples"-->
+<!--          >-->
+<!--            <span class="f6 ml3 pr2">Example Scripts</span>-->
+<!--          </a>-->
+<!--        </div>-->
       </div>
     </section>
 
@@ -351,7 +350,7 @@
                 >Federico Tartarini
               </a>
             </div>
-            <div class="fw3">Developer and UI design</div>
+            <div class="fw3">Developer, UI design, Back End</div>
           </div>
           <div class="tc pa2 pa4-l">
             <img
