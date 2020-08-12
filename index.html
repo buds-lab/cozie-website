@@ -177,11 +177,15 @@
               import pandas as pd <br />
               import json <br /><br />
               YOUR_TIMEZONE = 'Asia/Singapore' <br /><br />
-              payload = {'experiment-id': 'debug', 'weeks': '30', 'user-id':
-              'Vivid Vervet'} <br />
+              payload = {'experiment-id': 'experiment', 'weeks': '30', 'user-id':
+              'user01'} <br /><br />
+              # the api-key below is limited to 200 queries per day. Please contact us to get an API key
+              headers = {"Accept": "application/json",
+              'x-api-key': '7v90iALbXt1yRHdVomfpH80wmz14wTt92I0CR0na'} <br /><br />
               response = requests.get(
-              'https://ay1bwnlt74.execute-api.us-east-1.amazonaws.com/test/request/',
-              params=payload) <br />
+              'https://x2nwuplc8d.execute-api.us-east-1.amazonaws.com/default/read-coziePublic-fitbitAPI',
+              params=payload,
+              headers=headers) <br />
               my_json = response.content.decode('utf8').replace("'", '"') <br />
               data = json.loads(my_json) <br />
               df = pd.read_json(data[1]['data']).T <br />
