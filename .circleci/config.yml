@@ -3,6 +3,8 @@ jobs:
   build:
     docker:
       - image: 'circleci/node:8.11.1'
+    branches:
+      ignore: gh-pages
     steps:
       - checkout
       - run:
