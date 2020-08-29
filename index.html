@@ -51,11 +51,11 @@
 
     <!-- Favicon
         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="img/favicon.ico" />
+    <link rel="icon" type="image/png" href="img/watch.ico" />
   </head>
   <body style="overflow-x: hidden;">
     <!-- Primary Page Layout
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
     <header class="sans-serif w-100">
       <div class="cover bg-left bg-center-l">
@@ -100,7 +100,7 @@
               </a>
               <a
                 class="no-underline near-white bg-animate bg-transparent hover-bg-gray inline-flex ba b--white items-center ma2 tc br2 pa2 mb4"
-                href="https://www.budslab.org/website-dev/docs/home"
+                href="docs/home.html"
                 title="GitHub"
               >
                 <img src="img/watch.ico" height="32" alt="Doc logo" />
@@ -177,19 +177,20 @@
               import pandas as pd <br />
               import json <br /><br />
               YOUR_TIMEZONE = 'Asia/Singapore' <br /><br />
-              payload = {'experiment-id': 'experiment', 'weeks': '30', 'user-id':
-              'user01'} <br /><br />
-              # the api-key below is limited to 200 queries per day. Please contact us to get an API key <br />
-              headers = {"Accept": "application/json",
-              'x-api-key': '7v90iALbXt1yRHdVomfpH80wmz14wTt92I0CR0na'} <br /><br />
+              payload = {'experiment-id': 'experiment', 'weeks': '30',
+              'user-id': 'user01'} <br /><br />
+              # the api-key below is limited to 200 queries per day. Please
+              contact us to get an API key <br />
+              headers = {"Accept": "application/json", 'x-api-key':
+              '7v90iALbXt1yRHdVomfpH80wmz14wTt92I0CR0na'} <br /><br />
               response = requests.get(
               'https://x2nwuplc8d.execute-api.us-east-1.amazonaws.com/default/read-coziePublic-fitbitAPI',
-              params=payload,
-              headers=headers) <br />
+              params=payload, headers=headers) <br />
               my_json = response.content.decode('utf8').replace("'", '"') <br />
               data = json.loads(my_json) <br />
               df = pd.read_json(data[1]['data']).T <br />
-              df.index = df.index.tz_localize('UTC').tz_convert(YOUR_TIMEZONE) <br /><br />
+              df.index = df.index.tz_localize('UTC').tz_convert(YOUR_TIMEZONE)
+              <br /><br />
               df.head()
             </code>
           </div>
@@ -242,22 +243,22 @@
           <!--          </div>-->
         </div>
 
-<!--        <div class="pa4">-->
-<!--          &lt;!&ndash;            <a class="f6 no-underline grow dib v-mid bg-blue white ba b&#45;&#45;blue ph3 pv2 mb3" target="_blank"&ndash;&gt;-->
-<!--          &lt;!&ndash;               href="https://github.com/buds-lab/cozie-examples/wiki">Full Documentation</a>&ndash;&gt;-->
-<!--          <a-->
-<!--            class="no-underline near-white bg-animate bg-transparent hover-bg-gray inline-flex ba b&#45;&#45;white items-center ma2 tc br2 pa2 mb4"-->
-<!--            href="https://github.com/buds-lab/cozie-examples"-->
-<!--          >-->
-<!--            <span class="f6 ml3 pr2">Example Scripts</span>-->
-<!--          </a>-->
-<!--        </div>-->
+        <!--        <div class="pa4">-->
+        <!--          &lt;!&ndash;            <a class="f6 no-underline grow dib v-mid bg-blue white ba b&#45;&#45;blue ph3 pv2 mb3" target="_blank"&ndash;&gt;-->
+        <!--          &lt;!&ndash;               href="https://github.com/buds-lab/cozie-examples/wiki">Full Documentation</a>&ndash;&gt;-->
+        <!--          <a-->
+        <!--            class="no-underline near-white bg-animate bg-transparent hover-bg-gray inline-flex ba b&#45;&#45;white items-center ma2 tc br2 pa2 mb4"-->
+        <!--            href="https://github.com/buds-lab/cozie-examples"-->
+        <!--          >-->
+        <!--            <span class="f6 ml3 pr2">Example Scripts</span>-->
+        <!--          </a>-->
+        <!--        </div>-->
       </div>
     </section>
 
     <section class="sans-serif bg-white black relative">
       <div class="fl bg-white black pv6-l w-100">
-        <div class="fl flex-ns w-50 items-center cf ph2 ph5-m v-mid br tc">
+        <div class="fl flex-ns w-100 items-center cf ph2 ph5-m v-mid br tc">
           <div class="fl tc">
             <h1 class="f2 fw2 mb0 pa2">Free to use</h1>
             <h2 class="fw1 f4 black-80 mb1">public database</h2>
@@ -280,22 +281,23 @@
           </div>
         </div>
 
-        <div class="fl flex-ns w-50 items-center cf ph2 ph5-m v-mid tc">
-          <!-- <div class="fl tc">
-            <h1 class="f2 fw2 mb0 pa2">Go Pro</h1>
-            <h2 class="fw1 f4 black-80 mb1">private database</h2>
-            <h2 class="fw1 f4 black-80 mb1">customised questions</h2>
+        <!--    <div class="fl flex-ns w-50 items-center cf ph2 ph5-m v-mid tc">
+             <div class="fl tc">
+               <h1 class="f2 fw2 mb0 pa2">Go Pro</h1>
+               <h2 class="fw1 f4 black-80 mb1">private database</h2>
+               <h2 class="fw1 f4 black-80 mb1">customised questions</h2>
 
-            <div class="pa4">
-              <a
-                class="f6 no-underline grow dib v-mid bg-blue white ba b--blue ph3 pv2 mb3"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfOAlQmWO8MJUtYnpmwKm3R0wu0gnr46lsShHqkkIRGOgF8-w/viewform?usp=sf_link"
-                target="_blank"
-                >Request Quote</a
-              >
-            </div>
-          </div>
-          --> </div> 
+               <div class="pa4">
+                 <a
+                   class="f6 no-underline grow dib v-mid bg-blue white ba b--blue ph3 pv2 mb3"
+                   href="https://docs.google.com/forms/d/e/1FAIpQLSfOAlQmWO8MJUtYnpmwKm3R0wu0gnr46lsShHqkkIRGOgF8-w/viewform?usp=sf_link"
+                   target="_blank"
+                   >Request Quote</a
+                 >
+               </div>
+             </div>
+           </div>
+        -->
       </div>
     </section>
 
@@ -331,12 +333,14 @@
                   >Development of personalized thermal comfort models</a
                 >
                 <span class="f5 db lh-copy measure">
-                  We are currently conducting a field thermal comfort study which
-                  involves 20 participants. The aim of this project is to develop personalized
-                  thermal comfort models using wearables and IoT sensors. Participants were
-                  asked to complete an average of 6 surveys per day for a period of 6 months. The study is
-                  planned to end in Oct 2020. The results will be used to
-                  to inform the design of future sustainable buildings in the tropics.
+                  We are currently conducting a field thermal comfort study
+                  which involves 20 participants. The aim of this project is to
+                  develop personalized thermal comfort models using wearables
+                  and IoT sensors. Participants were asked to complete an
+                  average of 6 surveys per day for a period of 6 months. The
+                  study is planned to end in Oct 2020. The results will be used
+                  to to inform the design of future sustainable buildings in the
+                  tropics.
                 </span>
               </li>
             </ul>
@@ -399,7 +403,7 @@
             />
             <div>
               <a
-                href="https://matiasquintana.com/"
+                href="https://matiasquintana.com"
                 style="text-decoration: none; color: black;"
                 >Matias Quintana</a
               >
@@ -505,12 +509,26 @@
                 >budslab, National University of Singapore</b
               ></small
             >
+            <p>
+              <small class="f6 db tc">
+                Please cite us if you use Cozie:
+                <a
+                  target="_blank"
+                  class="db white link dim mb1 f6 db tc"
+                  href="https://iopscience.iop.org/article/10.1088/1742-6596/1343/1/012145"
+                  >Prageeth Jayathissa, Matias Quintana, Tapeesh Sood and Negin
+                  Nazarian, Clayton Miller (2019) Is your clock-face cozie? A
+                  smartwatch methodology for the in-situ collection of occupant
+                  comfort data</a
+                >
+              </small>
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- End Document
-	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
   </body>
 </html>
