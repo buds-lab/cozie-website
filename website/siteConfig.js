@@ -20,6 +20,8 @@ const siteConfig = {
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
+  cname: 'cozie.app',
+
   // Used for publishing and more
   projectName: 'cozie-website',
   organizationName: 'buds-lab',
