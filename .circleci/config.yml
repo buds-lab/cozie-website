@@ -30,4 +30,7 @@ workflows:
   build_and_test: # name of your workflow
     jobs:
       - build1
-      - build2
+      - build2:
+        filters:
+          branches:
+            only: master
