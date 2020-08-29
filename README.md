@@ -18,9 +18,9 @@ yarn install
 yarn run build
 ```
 
-You should be able to see the static files in the `website/build/cozie-website` folder. Open up the `index.html` and check that it all works
+You should be able to see the static files in the `website/build/cozie-website` folder. Open up the `website/build/cozie-website/index.html`  and check that it all works
 
 ### Deploying
 
 - Deploy your changes to a new branch. Once the tests have passed you may merge it into `master`
-- A continusous integration pipeline will automatically push the website to the `gh-pages` branch which then gets deployed by github pages
+- A continuous integration pipeline will automatically push build any changes to the `master` to the `gh-pages` branch which then gets deployed by github pages
