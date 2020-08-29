@@ -3,8 +3,6 @@ jobs:
   build1:
     docker:
       - image: 'circleci/node:8.11.1'
-    branches:
-      ignore: gh-pages
     steps:
       - checkout
       - run:
@@ -18,8 +16,6 @@ jobs:
   build2:
     docker:
       - image: 'circleci/node:8.11.1'
-    branches:
-      only: master
     steps:
       - checkout
       - run:
@@ -34,5 +30,11 @@ workflows:
   version: 2
   build_and_test: # name of your workflow
     jobs:
-      - build1
-      - build2
+      - build1:
+        filters:
+              branches:
+                ignore: gh-pages
+      - build2:
+        filters:
+              branches:
+                only: master
