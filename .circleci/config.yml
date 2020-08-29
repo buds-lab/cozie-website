@@ -2,13 +2,13 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: 'circleci/node:latest'
+      - image: 'circleci/node:8.11.1'
     steps:
       - checkout
       - run:
           name: Deploying to GitHub Pages
           command: |
-            git config --global user.email "<GITHUB_USERNAME>@users.noreply.github.com"
-            git config --global user.name "<YOUR_NAME>"
-            echo "machine github.com login <GITHUB_USERNAME> password $GITHUB_TOKEN" > ~/.netrc
-            cd website && yarn install && GIT_USER=<GIT_USER> yarn run publish-gh-pages
+            git config --global user.email "pjayathissa@users.noreply.github.com"
+            git config --global user.name "pjayathissa"
+            echo "machine github.com login pjayathissa password $GITHUB_TOKEN" > ~/.netrc
+            cd website && yarn install && GIT_USER=pjayathissa yarn run publish-gh-pages
