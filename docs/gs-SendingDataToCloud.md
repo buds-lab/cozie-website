@@ -4,6 +4,8 @@ title: Sending data to the cloud
 sidebar_label: Sending data to the cloud
 ---
 
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/PkTSNwP12TI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 We are sending the data from the Cozie application to our cloud database using an [AWS Lambda function](https://aws.amazon.com/lambda/).
 The Lambda function listens for any incoming POST requests, checks that the sender has the right API key, 
 process the data and send it to our cloud database.
