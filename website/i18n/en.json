@@ -13,6 +13,10 @@
         "title": "Uploading to the AppStore",
         "sidebar_label": "Uploading to the AppStore"
       },
+      "change-questions": {
+        "title": "Changing questions displayed to the user",
+        "sidebar_label": "Change Questions"
+      },
       "datatransfer-between-phone-and-fitbit": {
         "title": "Datatransfer between the phone and the Fitbit",
         "sidebar_label": "Datatransfer between the phone and the Fitbit"
