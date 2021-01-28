@@ -14,7 +14,7 @@ npm install
 npm run build
 
 # Or if using Yarn
-yarn install
+yarn installs
 yarn run build
 ```
 
